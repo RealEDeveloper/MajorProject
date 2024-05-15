@@ -1,1 +1,49 @@
+Instructions on ->
+
+
+Installation of required tools 
+
+The environment used for development is Remix IDE. Remix IDE is a no-setup tool with a GUI for developing smart contracts.
+Remix used well with other tools, and allows for a simple deployment process to the chain of user choice. Remix is famous for its visual debugger.
+
+The compiler used is Solidity Compiler which is an open-source compiler that translates Solidity code into bytecode that can be executed on the Ethereum Virtual Machine (EVM). 
+It is written in the Go programming language and is used to compile Solidity code into executable bytecode.
+
+The testnet used is sepolia testnet
+Testnets are blockchains designed to mimic the operating environment of a ‘mainnet’ but exist on a separate ledger. These testnets help developers test their applications and smart contracts in a risk-free way before deploying their products to Ethereum’s mainnet environment.
+Sepolia was designed to simulate harsh network conditions, and has shorter block times, which enable faster transaction confirmation times and feedback for developers.
+Details about the testnet->
+Network Name - Sepolia Test Netwok
+RPC URL - https://eth-sepolia.g.alchemy.com/v2/[YOUR-API-KEY]
+Chain ID - 11155111
+Currency Symbol - SepoliaETH
+Block Explorer URL - https://sepolia.etherscan.io/
+
+The tool or Wallet for doing transaction is MetaMask
+MetaMask is a crypto wallet. Just like we have a physical wallet for money, MetaMask is like a digital wallet for cryptocurrencies. Instead of holding coins and bills, it holds digital tokens like Ethereum and makes it easy to interact with DeFi and NFTs on the Ethereum blockchain.
+
+
+
+Execution of code 
+
+To execute a Solidity file in Remix IDE, the steps are:
+Open Remix IDE and create a new file.
+Write your Solidity code in the file. For example,  create a simple contract called Lottery:
+
+Compile the contract by clicking the "Compile" button under the Compiler window.
+Deploy the contract by clicking the "Deploy" button under the Deploy and Run Transactions window. 
+
+We now connect Ethereum wallet to Remix IDE to deploy your contract.
+Now we need to have some ether to execute the transaction 
+
+
+
+
+
+Modification of Code->
+
+some modifications we can make to the Solidity lottery application:
+
+Add a constructor to the Lottery.sol contract to set the minimum number of participants required to start the lottery:
+solidity
 
