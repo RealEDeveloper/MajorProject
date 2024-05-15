@@ -14,7 +14,7 @@ Testnets are blockchains designed to mimic the operating environment of a ‘mai
 Sepolia was designed to simulate harsh network conditions, and has shorter block times, which enable faster transaction confirmation times and feedback for developers.
 Details about the testnet->
 Network Name - Sepolia Test Netwok
-RPC URL - https://eth-sepolia.g.alchemy.com/v2/[YOUR-API-KEY]
+RPC URL - https://eth-sepolia.g.alchemy.com/v2/[-API-KEY]
 Chain ID - 11155111
 Currency Symbol - SepoliaETH
 Block Explorer URL - https://sepolia.etherscan.io/
