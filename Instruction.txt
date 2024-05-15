@@ -1,7 +1,7 @@
 Instructions on installation,execution and modification of code->
 
 
-Installation of required tools 
+Installation of required tools-->
 
 The environment used for development is Remix IDE. Remix IDE is a no-setup tool with a GUI for developing smart contracts.
 Remix used well with other tools, and allows for a simple deployment process to the chain of user choice. Remix is famous for its visual debugger.
@@ -23,7 +23,7 @@ MetaMask is a crypto wallet. Just like we have a physical wallet for money, Meta
 
 
 
-Execution of code 
+Execution of code-->
 
 To execute a Solidity file in Remix IDE, the steps are:
 Open Remix IDE and create a new file.
@@ -37,11 +37,13 @@ We now connect Ethereum wallet to Remix IDE to deploy your contract.
 Now we need to have some ether to execute the transaction so we mine the ethers from sepolia pow faucet 
 This is an Ethereum Faucet running on the Optimism Sepolia Testnet. To prevent malicious actors from exhausting all available funds or accumulating enough Ether to mount long running spam attacks, this faucet requires some mining work to be done in exchange for free testnet funds.
 
+
+
 Once deployed, we can interact with the contract's functions by clicking on the method calls under the drop-down of deployed lottery smart contract.
 
 
 
-Modification of Code->
+Modification of Code-->
 
 some modifications we can make to the Solidity lottery application:
 
