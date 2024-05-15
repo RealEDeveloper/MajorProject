@@ -1,4 +1,4 @@
-Instructions on ->
+Instructions on installation,execution and modification of code->
 
 
 Installation of required tools 
@@ -6,8 +6,7 @@ Installation of required tools
 The environment used for development is Remix IDE. Remix IDE is a no-setup tool with a GUI for developing smart contracts.
 Remix used well with other tools, and allows for a simple deployment process to the chain of user choice. Remix is famous for its visual debugger.
 
-The compiler used is Solidity Compiler which is an open-source compiler that translates Solidity code into bytecode that can be executed on the Ethereum Virtual Machine (EVM). 
-It is written in the Go programming language and is used to compile Solidity code into executable bytecode.
+The compiler used is Solidity Compiler which is an open-source compiler that translates Solidity code into bytecode that can be executed on the Ethereum Virtual Machine (EVM). It is written in the Go programming language and is used to compile Solidity code into executable bytecode.
 
 The testnet used is sepolia testnet
 Testnets are blockchains designed to mimic the operating environment of a ‘mainnet’ but exist on a separate ledger. These testnets help developers test their applications and smart contracts in a risk-free way before deploying their products to Ethereum’s mainnet environment.
@@ -31,12 +30,14 @@ Open Remix IDE and create a new file.
 Write your Solidity code in the file. For example,  create a simple contract called Lottery:
 
 Compile the contract by clicking the "Compile" button under the Compiler window.
+Select the testnet from the environment option which is sepolia testnet
 Deploy the contract by clicking the "Deploy" button under the Deploy and Run Transactions window. 
 
 We now connect Ethereum wallet to Remix IDE to deploy your contract.
-Now we need to have some ether to execute the transaction 
+Now we need to have some ether to execute the transaction so we mine the ethers from sepolia pow faucet 
+This is an Ethereum Faucet running on the Optimism Sepolia Testnet. To prevent malicious actors from exhausting all available funds or accumulating enough Ether to mount long running spam attacks, this faucet requires some mining work to be done in exchange for free testnet funds.
 
-
+Once deployed, we can interact with the contract's functions by clicking on the method calls under the drop-down of deployed lottery smart contract.
 
 
 
@@ -45,5 +46,9 @@ Modification of Code->
 some modifications we can make to the Solidity lottery application:
 
 Add a constructor to the Lottery.sol contract to set the minimum number of participants required to start the lottery:
-solidity
+Add a participate function to allow participants to join the lottery by sending Ether:
+Add a pickWinner function to allow the lottery manager to randomly select a winner:
+Add a random function to generate a random number:
+Add a WinnerPicked event to emit when a winner is picked:
+Modify the Lottery.sol contract to include the new functions and variables:
 
