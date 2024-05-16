@@ -37,9 +37,13 @@ We now connect Ethereum wallet to Remix IDE to deploy your contract.
 Now we need to have some ether to execute the transaction so we mine the ethers from sepolia pow faucet 
 This is an Ethereum Faucet running on the Optimism Sepolia Testnet. To prevent malicious actors from exhausting all available funds or accumulating enough Ether to mount long running spam attacks, this faucet requires some mining work to be done in exchange for free testnet funds.
 
-
-
+the transaction to happen requires a minimum amount of ether to get transferred and also the gas amount which is the cost of any transaction to happen as we are changing in the blockchain which requires extra cost.
 Once deployed, we can interact with the contract's functions by clicking on the method calls under the drop-down of deployed lottery smart contract.
+
+the method calls which were in the deployed lottery smart contract are
+pickWinner :It picks the winner when the user calls this function by using random lottery winner generation
+getBalance: it get the balance of the smart contract which the participants transferred to participate in thre lottery process when user calls this function.
+participants: It determines the number of participants and there address when someone call the function.
 
 
 
