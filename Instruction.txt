@@ -40,6 +40,12 @@ This is an Ethereum Faucet running on the Optimism Sepolia Testnet. To prevent m
 the transaction to happen requires a minimum amount of ether to get transferred and also the gas amount which is the cost of any transaction to happen as we are changing in the blockchain which requires extra cost.
 Once deployed, we can interact with the contract's functions by clicking on the method calls under the drop-down of deployed lottery smart contract.
 
+The winner is decided by the algorithm which is used in  process is commit-reveal scheme algorithm  and the reason behind using this cryptographic algorithm is to 
+conduct a fair lottery system which is transparent as well as used for voting or other election process
+It allows participants to make their choices privately without revealing them to others and then share their commitments in a way that prevents fraud or manipulation.
+
+ This strategy relies on the properties of cryptographic hash functions to achieve its goals. This results in a stable hash value as a cryptographic addition to the original scheme. This prevents others from learning about their options before the announcement stage. 
+
 the method calls which were in the deployed lottery smart contract are
 pickWinner :It picks the winner when the user calls this function by using random lottery winner generation
 getBalance: it get the balance of the smart contract which the participants transferred to participate in thre lottery process when user calls this function.
@@ -52,9 +58,31 @@ Modification of Code-->
 some modifications we can make to the Solidity lottery application:
 
 Add a constructor to the Lottery.sol contract to set the minimum number of participants required to start the lottery:
+  Constructor(){
+         manager = msg.sender;
+    function pickWinner() public{          
+                require(msg.sender == manager);
+    require (players.length >= 3);
+}
+
 Add a participate function to allow participants to join the lottery by sending Ether:
+ receive () payable external{
+              require(msg.value == 0.01 ether);
+              players.push(payable(msg.sender));
+  }
+
 Add a pickWinner function to allow the lottery manager to randomly select a winner:
+       uint r = random();
+           address payable winner;
+          uint index = r % players.length;
+           winner = players[index];
+
 Add a random function to generate a random number:
-Add a WinnerPicked event to emit when a winner is picked:
-Modify the Lottery.sol contract to include the new functions and variables:
+  function random() internal view returns(uint){
+    return uint(keccak256(abi.encodePacked
+    (blockhash(block.number - 1), 
+     block.timestamp, players.length)));
+  }
+
+Modify the Lottery.sol contract to include the new functions and variables
 
